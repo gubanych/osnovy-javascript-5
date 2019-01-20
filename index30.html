@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Пример 30</title>
+</head>
+<body>
+  <script>
+    var x = parseFloat(prompt('Введите число x: ').replace(',','.'));
+    var y = parseFloat(prompt('Введите число y: ').replace(',','.'));
+    var z = +x;
+    var i = 2;
+    while(i <= y){
+      z = z * x;
+      i++;
+    };
+    var message = 'Число ' + x + ' в степени ' + y + ' равно ';
+    switch (true) {
+      case (y === 0): z = 1; break;
+      case (x === 0): z = 0; break;
+      case (Math.abs(y) % 1 > 0 && x > 0): z = Math.pow(x, y); break;
+      case x < 0: z = 1/z; break;
+    }
+
+    switch (true) {
+      case ((!x || !y) && (x!== 0 && y !== 0)): message = 'Вероятно вы ввели не числа'; break;
+      case (x === 0 && y < 0): message = 'Нельзя возвести 0 в отрицательную степень'; break;
+      case ((Math.abs(y) % 1 > 0) && (x < 0)): message = 'Нельзя возвести отрицательное число в дробную степень'; break; 
+      default: message = 'Число ' + x + ' в степени ' + y + ' равно ' +z; break;
+    }
+    alert(message);
+  </script>
+</body>
+</html>

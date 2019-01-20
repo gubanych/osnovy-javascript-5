@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Самостоятельная работа Задание 1</title>
+</head>
+<body>
+    <script>
+        do {
+            var date = prompt('Введите дату в формате дд.мм.гггг, например 31.12.2018');
+            var dateArr = date.split('.');
+            date = new Date(Date.parse([dateArr[1], dateArr[0], dateArr[2]]));
+        } while (date == 'Invalid Date' || dateArr.length < 3);
+        var season;
+        switch (date.getMonth()) {
+            case 11:
+            case 0:
+            case 1: season = 'зима'; break;
+            case 2:
+            case 3:
+            case 4: season = 'весна'; break;
+            case 5:
+            case 6:
+            case 7: season = 'лето'; break;
+            case 8:
+            case 9:
+            case 10: season = 'осень'; break;
+        }
+        alert(season);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Самостоятельная работа Задание 2</title>
+</head>
+<body>
+    <script>
+        
+        var color = prompt('Какого цвета гриб?');
+        
+        if(Number(color) || Number(color) == 0){
+            alert('Такого цвета нет')
+        }
+        else {
+            var skirt = confirm('Нажмите OK, если у гриба есть юбка или Отмена если нет');
+            var message;
+        
+            switch (true) {
+                case (color === 'белый' && !skirt): message = 'Вы нашли белый гриб'; break;
+                case (color === 'красный' && skirt): message = 'А не мухомор ли это?'; break;
+                case (color === 'красный' && !skirt): message = 'Может, это подосиновик'; break;
+                default: message = 'С грибами надо быть внимательными'; break;
+            }
+            alert(message);
+        }
+        
+    </script>
+</body>
+</html>

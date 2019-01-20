@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Пример 31</title>
+</head>
+<body>
+    <script>
+        var n;
+        do {
+            n = prompt('Введите положительное число: ')
+        } while (parseInt(n) != n || n < 0);
+        var z = 1;
+        if (n <= 170) {
+            var i = 1;
+            do {
+                z = z * i;
+                i++;
+            } while (i <= n);
+            alert('Факториал числа ' + n + ' равен ' + z);
+        } else {
+            alert('Вычислить средствами JS факториал числа больше 170 не представляется возможным');
+        }
+    </script>
+</body>
+</html>
